@@ -3,7 +3,7 @@ let Correios = require('node-correios');
 
 module.exports.correio = async event => {
   let correios = new Correios();
-  
+
   const body = JSON.parse(event.body);
 
   const args = {
@@ -46,7 +46,7 @@ module.exports.correio = async event => {
     },
     body: JSON.stringify(
       {
-        "location": argsE, "deliverPrice": deliverPrice
+        "location": location, "deliverPrice": deliverPrice
       },
       null,
       2
